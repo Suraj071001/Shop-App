@@ -46,6 +46,7 @@ public class Catalog extends AppCompatActivity implements LoaderManager.LoaderCa
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
                 Intent intent = new Intent(Catalog.this,MainActivity.class);
                 intent.putExtra("uri",""+id);
+                intent.putExtra("title","Edit Item");
                 startActivity(intent);
             }
         });
@@ -54,6 +55,7 @@ public class Catalog extends AppCompatActivity implements LoaderManager.LoaderCa
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Catalog.this,MainActivity.class);
+                intent.putExtra("title","Add New Item");
                 startActivity(intent);
             }
         });
